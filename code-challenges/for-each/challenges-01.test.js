@@ -82,6 +82,10 @@ Write a function named removeWithForEach that produces the same output as challe
 
 const removeWithForEach = (arr, callback) => {
   // Solution code here...
+  arr.forEach(element => {
+    callback(element, arr);
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -96,12 +100,18 @@ This anonymous function should accept up to three arguments: the element, the in
 
 const removeWithAnon = (arr) => {
   // Solution code here...
+  arr.forEach(function(element, index, arr) {
+    if (element % 3 === 2) {
+      arr.pop();
+    }
+  })
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store intentory.
+Write a function named createList that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -117,6 +127,13 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  const groceryList = [];
+  availableItems.forEach(function (element) {
+    if (element.available === true) {
+      groceryList.push(element.name);
+    }
+  });
+  return groceryList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,7 +151,20 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
+  let buzzFizz = [];
   // Solution code here...
+  arr.forEach(element => {
+    if (element % 3 === 0 && element % 5 !== 0) {
+      buzzFizz.push('Fizz');
+    } else if (element % 5 === 0 && element % 3 !== 0) {
+      buzzFizz.push('Buzz');
+    } else if (element % 3 === 0 && element % 5 === 0) {
+      buzzFizz.push('Fizz Buzz');
+    } else {
+      buzzFizz.push(element);
+    }
+  });
+  return buzzFizz;
 };
 
 /* ------------------------------------------------------------------------------------------------
