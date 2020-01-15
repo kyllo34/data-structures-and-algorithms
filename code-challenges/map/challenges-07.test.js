@@ -26,7 +26,9 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  const newArr = [];
+  arr.forEach(num => newArr.push(2 ** num));
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,8 +38,8 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
-};
+  return arr.map(num => 2 ** num);
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -50,8 +52,13 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
-  // Solution code here...
+  const newArr = []
+  arr.forEach(el => {
+    newArr.push(el.charCodeAt(0)) 
+  })
+  return newArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -64,7 +71,13 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
+  const newArr = [];
+  arr.forEach(number => {
+    number % 2 === 0 ? newArr.push('even') 
+    : number % 2 === 1 ? newArr.push('odd')
+    : newArr.push('N/A');
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -110,7 +123,7 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  // Solution code here...
+  return arr.map(x => x.ability.name);
 };
 
 /* ------------------------------------------------------------------------------------------------
