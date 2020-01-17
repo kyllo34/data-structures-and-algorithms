@@ -146,8 +146,8 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  return arr.filter(character => character.children)
-    .map(charWithChild => charWithChild)};
+  return arr.filter(character => !character.children)
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -158,7 +158,8 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  // Solution code here...
+  return arr.filter(element => typeof(element) === 'number')
+    .map(number => number % 2 === 0 ? 'even' : 'odd' );
 };
 
 /* ------------------------------------------------------------------------------------------------
