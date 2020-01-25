@@ -93,7 +93,7 @@ let biggerThanLuke = (arr) => {
       heavyCharacters.push(character.name);
     }
   })
-  return heavyCharacters.join(' -- ');
+  return heavyCharacters.join(' - ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -111,7 +111,13 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  return arr.sort((a,b) => {
+    if (a[property] > b[property]) {
+      return 1;
+    } else {
+      return -1;
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -127,7 +133,7 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-// Solution code here...
+  return url.includes('https://'); 
 };
 
 /* ------------------------------------------------------------------------------------------------
