@@ -1,7 +1,7 @@
 # Code Challenges
 
 ## Table of Contents
-[Array-Reverse](code-challenges\arraReverse\array-reverse.js)
+[Array-Reverse](./code-challenges\arraReverse\array-reverse.js)
 
 # Reverse an Array
 
