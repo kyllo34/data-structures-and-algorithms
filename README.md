@@ -1,7 +1,7 @@
 # Code Challenges
 
 ## Table of Contents
-[Array-Reverse](../master/code-challenges/arraReverse/array-reverse.js)
+[Array-Reverse](../master/code-challenges/arraReverse/array-reverse.js),
 [Array-Shift](../master/code-challenges/array-shift/array-shift.js)
 
 # Reverse an Array
