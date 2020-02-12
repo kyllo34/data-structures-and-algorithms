@@ -2,6 +2,7 @@
 
 ## Table of Contents
 [Array-Reverse](../master/code-challenges/arraReverse/array-reverse.js)
+[Array-Shift](../master/code-challenges/array-shift/array-shift.js)
 
 # Reverse an Array
 
@@ -13,3 +14,17 @@ I know that unshift is a good way of pushing elements to an array but from the f
 
 ## Solution
 ![White-board](../master/assets/arrayreverse.jpg)
+
+# Shift an Array
+
+# Challenge Summary
+Code challenge to insert a number into the middle of an array at index and shift the contained elements.
+
+## Challenge Description
+Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.
+
+## Approach & Efficiency
+I decided first to create an empty array to add elements to as I believed it would be more difficult to modify the input array. I created an independan counter for the new array as they will have different lengths eventually. I then chose to iterate through the input array and insert each element into the new array with each iteration. Once the iteration reached halfway through the input array rounding up minus 1 I set the new arrays value to equal the input value then continued with the loop. I returned the new array.
+## Solution
+![White-board-1](../master/assets/array-shift1.jpg)
+![White-board-2](../master/assets/array-shift2.jpg)
