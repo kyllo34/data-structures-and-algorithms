@@ -63,4 +63,3 @@ Be sure to follow your language/frameworks standard naming conventions (e.g. C# 
 I approached this challenge by following along loosely with the demo at first and then going off on my own to demonstrate my understanding. I ran the methods I created with console logs in a node environment so that i could visualize the construction of each node and the traversing. with the last method I decided to start creating tests so that i could test the toString() method directly and now I have a much better understanding of how to contruct and use tests.
 
 ## API
-<!-- Description of each method publicly available to your Linked List -->
