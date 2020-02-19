@@ -5,6 +5,7 @@
 [Array-Shift](../master/code-challenges/array-shift/array-shift.js)
 [Array-Binary-Search](../master/code-challenges/arrayBinarySearch/array-binary-search.js)
 [Linked-List](../master/code-challenges/linkedList/linked-list.test.js)
+[2-Insertions](../master/code-challenges/linkedList/linked-list.test.js)
 
 # Reverse an Array
 
