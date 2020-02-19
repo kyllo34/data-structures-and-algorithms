@@ -53,6 +53,23 @@ class LinkedList {
       }
     }
   }
+  kthFromEnd(k) {
+    const valArray = [];
+    let current = this.head;
+    if(!this.head || k < 0) {
+      return 'EXCEPTION';
+    } else {
+      while(current !== null) {
+        valArray.unshift(current.value);
+        current = current.next;
+      }
+      if (k < valArray.length) {
+        return valArray[k];
+      } else {
+        return 'EXCEPTION';
+      }
+    }
+  }
   append(val) {
     let node = new Node(val);
     if (!this.head) {
@@ -114,6 +131,39 @@ class LinkedList {
 
 // Test Linked list
 describe('Testing Linked-List', () => {
+  test('Should fail when k is greater than the length of the linked list.', () => {
+    const list = new LinkedList;
+    for(let i = 0; i < 3; i++) {
+      list.append(i);
+    }
+    expect(list.kthFromEnd(5)).toBe('EXCEPTION');
+  });
+  test('Should fail when k is equal to the length of the linked list.', () => {
+    const list = new LinkedList;
+    for(let i = 0; i < 3; i++) {
+      list.append(i);
+    }
+    expect(list.kthFromEnd(3)).toBe('EXCEPTION');
+  });
+  test('Should fail when k is not a positive integer.', () => {
+    const list = new LinkedList;
+    for(let i = 0; i < 3; i++) {
+      list.append(i);
+    }
+    expect(list.kthFromEnd(-2)).toBe('EXCEPTION');
+  });
+  test('Should fail where the linke ist is of a size 1.', () => {
+    const list = new LinkedList;
+    list.append(1);
+    expect(list.kthFromEnd(1)).toBe('EXCEPTION');
+  });
+  test('Should return the kth node value where k is in the middle of the linked list', () => {
+    const list = new LinkedList;
+    for(let i = 0; i < 3; i++) {
+      list.append(i);
+    }
+    expect(list.kthFromEnd(1)).toStrictEqual(1);
+  });
   test('Should instantiate an empty linked list.' , () => {
     const list = new LinkedList();
     expect(list.head).toStrictEqual(null);
@@ -191,7 +241,6 @@ describe('Testing 2 insertions', () => {
       list.append(i);
     }
     list.insertBefore(1, 9);
-    console.log(list)
     expect(list.head.next.value).toStrictEqual(9);
   }) ;
   test('Should successfully insert a node before the first node of a linked list.', ()=> {
@@ -206,7 +255,6 @@ describe('Testing 2 insertions', () => {
       list.append(i);
     }
     list.insertAfter(1, 9);
-    console.log(list)
     expect(list.head.next.next.value).toStrictEqual(9);
   });
   test('Should successfully insert a node after the last node of the linked list.', ()=> {
@@ -215,7 +263,6 @@ describe('Testing 2 insertions', () => {
       list.append(i);
     }
     list.insertAfter(2, 9);
-    console.log(list)
     expect(list.head.next.next.next.value).toStrictEqual(9);
   });
 });

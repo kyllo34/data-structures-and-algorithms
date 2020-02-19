@@ -1,11 +1,10 @@
 # Code Challenges
 
 ## Table of Contents
-[Array-Reverse](../master/code-challenges/arraReverse/array-reverse.js),
-[Array-Shift](../master/code-challenges/array-shift/array-shift.js),
-[Array-Binary-Search](../master/code-challenges/arrayBinarySearch/array-binary-search.js),
-[Linked-List](../master/code-challenges/linkedList/linked-list.test.js),
-[2-Insertions](../master/code-challenges/linkedList/linked-list.test.js)
+[Array-Reverse](../master/code-challenges/arraReverse/array-reverse.js)
+[Array-Shift](../master/code-challenges/array-shift/array-shift.js)
+[Array-Binary-Search](../master/code-challenges/arrayBinarySearch/array-binary-search.js)
+[Linked-List](../master/code-challenges/linkedList/linked-list.test.js)
 
 # Reverse an Array
 
@@ -77,3 +76,15 @@ For this challenge i decided to write all the test first so that as i developed 
 
 ## Solution
 ![2-Insertions](../master/assets/2insertions.jpg);
+
+# 2 Insertions
+Write a method for the linked list which take a number k and returns the nodes value that is k from the end of the list.
+
+## Challenge Description
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+## Approach & Efficiency
+For this challenge i decided to write all the test first so that as i developed my methods the tests would prove that they were working. My approach was to traverse through the whole linked list and unshift each node value to an array and then return the kth index in that array. It is very efficient in terms of time and space.
+
+## Solution
+![kth-From-End](../master/assets/kthfromend.jpg);
