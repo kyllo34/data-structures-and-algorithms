@@ -62,4 +62,17 @@ Be sure to follow your language/frameworks standard naming conventions (e.g. C# 
 ## Approach & Efficiency
 I approached this challenge by following along loosely with the demo at first and then going off on my own to demonstrate my understanding. I ran the methods I created with console logs in a node environment so that i could visualize the construction of each node and the traversing. with the last method I decided to start creating tests so that i could test the toString() method directly and now I have a much better understanding of how to contruct and use tests.
 
-## API
+# 2 Insertions
+Create an append, insert before, and insert after method on a linked list
+
+## Challenge Description
+Write the following methods for the Linked List class:
+- .append(value) which adds a new node with the given value to the end of the list
+- .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+- .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+## Approach & Efficiency
+For this challenge i decided to write all the test first so that as i developed my methods the tests would prove that they were working. My approaches were efficent because you would only traverse once through the linked lists and only so far as was needed.
+
+## Solution
+![2-Insertions](../master/assets/2insertions.jpg);

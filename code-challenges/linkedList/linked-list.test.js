@@ -114,101 +114,101 @@ class LinkedList {
 
 // Test Linked list
 describe('Testing Linked-List', () => {
-//   test('Should instantiate an empty linked list.' , () => {
-//     const list = new LinkedList();
-//     expect(list.head).toStrictEqual(null);
-//   });
-  // test('Should insert into the linked list.', () => {
-  //   const list = new LinkedList();
-  //   for( let i = 0; i < 6; i++) {
-  //     list.insert(i);
-  //     expect(list.head.value).toStrictEqual(i);
-  //   }
-  // })
-//   test('The head property should properly point to the first node in the linked list.', () => {
-//     const list = new LinkedList();
-//     list.insert(2);
-//     list.insert(3);  
-//     expect(list.head.next.value).toEqual(2);
-//   })
-//   test('Should properly insert multple nodes into the linked list.', () => {
-//     const list = new LinkedList();
-//     for(let i = 0; i < 5; i++) {
-//       list.insert(i);
-//     }
-//     expect(list.head.next.next.next.next.value).toStrictEqual(0);
-//   })
-//   test('Should return true when finding a value within the linked list that exists.', () => {
-//     const list = new LinkedList();
-//     for(let i = 0; i < 10; i++) {
-//       list.insert(i);
-//     }
-//     for(let i = 0; i < 10; i++) {
-//       expect(list.includes(i)).toBe(true);
-//     }
-//   })
-//   test('Should return false when searching for a value in the linked list that does not exist.', () => {
-//     const list = new LinkedList();
-//     for(let i = 0; i < 10; i++) {
-//       list.insert(i);
-//     }
-//     for(let i = 0; i < 10; i++) {
-//       expect(list.includes(i + 300)).toBe(false);
-//     }
-//   })
-//   test('Should properly return a collection of all the values that exist in the linked list.', () => {
-//     const list = new LinkedList();
-//     for(let i = 0; i < 10; i++) {
-//       list.insert(i);
-//     }
-//     expect(list.toString()).toStrictEqual('{ 9 } -> { 8 } -> { 7 } -> { 6 } -> { 5 } -> { 4 } -> { 3 } -> { 2 } -> { 1 } ->  NULL');
-//   })
-// })
+  test('Should instantiate an empty linked list.' , () => {
+    const list = new LinkedList();
+    expect(list.head).toStrictEqual(null);
+  });
+  test('Should insert into the linked list.', () => {
+    const list = new LinkedList();
+    for( let i = 0; i < 6; i++) {
+      list.insert(i);
+      expect(list.head.value).toStrictEqual(i);
+    }
+  })
+  test('The head property should properly point to the first node in the linked list.', () => {
+    const list = new LinkedList();
+    list.insert(2);
+    list.insert(3);  
+    expect(list.head.next.value).toEqual(2);
+  })
+  test('Should properly insert multple nodes into the linked list.', () => {
+    const list = new LinkedList();
+    for(let i = 0; i < 5; i++) {
+      list.insert(i);
+    }
+    expect(list.head.next.next.next.next.value).toStrictEqual(0);
+  })
+  test('Should return true when finding a value within the linked list that exists.', () => {
+    const list = new LinkedList();
+    for(let i = 0; i < 10; i++) {
+      list.insert(i);
+    }
+    for(let i = 0; i < 10; i++) {
+      expect(list.includes(i)).toBe(true);
+    }
+  })
+  test('Should return false when searching for a value in the linked list that does not exist.', () => {
+    const list = new LinkedList();
+    for(let i = 0; i < 10; i++) {
+      list.insert(i);
+    }
+    for(let i = 0; i < 10; i++) {
+      expect(list.includes(i + 300)).toBe(false);
+    }
+  })
+  test('Should properly return a collection of all the values that exist in the linked list.', () => {
+    const list = new LinkedList();
+    for(let i = 0; i < 10; i++) {
+      list.insert(i);
+    }
+    expect(list.toString()).toStrictEqual('{ 9 } -> { 8 } -> { 7 } -> { 6 } -> { 5 } -> { 4 } -> { 3 } -> { 2 } -> { 1 } ->  NULL');
+  })
+})
 
-// // Testing for 2 insertions challenge
-// describe('Testing 2 insertions', () => {
-//   test('Should successfully add a node to the end of the linked list.', () => {
-//     const list = new LinkedList();
-//     list.append(1);
-//     expect(list.head.value).toStrictEqual(1);
-//     list.append(3);
-//     list.append(2);  
-//     list.append(5); 
-//     expect(list.head.next.next.next.value).toStrictEqual(5);
-//   });
-//   test('Should successfully add multiple nodes to the end of the linked list.', () => {
-//     const list = new LinkedList();
-//     list.append(1);
-//     expect(list.head.value).toStrictEqual(1);
-//     list.append(3);
-//     list.append(2);  
-//     list.append(5); 
-//     expect(list.head.next.next.next.value).toStrictEqual(5);
-//   });
-  // test('Should successfully insert a node before a node located at in the middle of a linked list.', () => {
-  //   const list = new LinkedList;
-  //   for(let i = 0; i < 3; i++) {
-  //     list.append(i);
-  //   }
-  //   list.insertBefore(1, 9);
-  //   console.log(list)
-  //   expect(list.head.next.value).toStrictEqual(9);
-  // }) ;
-  // test('Should successfully insert a node before the first node of a linked list.', ()=> {
-  //   const list = new LinkedList;
-  //   list.head = new Node(3)
-  //   list.insertBefore(3, 5);
-  //   expect(list.head.value).toStrictEqual(5);
-  // });
-  // test('Should successfully insert after a node in the middle of the linked list.', ()=> {
-  //   const list = new LinkedList;
-  //   for(let i = 0; i < 3; i++) {
-  //     list.append(i);
-  //   }
-  //   list.insertAfter(1, 9);
-  //   console.log(list)
-  //   expect(list.head.next.next.value).toStrictEqual(9);
-  // });
+// Testing for 2 insertions challenge
+describe('Testing 2 insertions', () => {
+  test('Should successfully add a node to the end of the linked list.', () => {
+    const list = new LinkedList();
+    list.append(1);
+    expect(list.head.value).toStrictEqual(1);
+    list.append(3);
+    list.append(2);  
+    list.append(5); 
+    expect(list.head.next.next.next.value).toStrictEqual(5);
+  });
+  test('Should successfully add multiple nodes to the end of the linked list.', () => {
+    const list = new LinkedList();
+    list.append(1);
+    expect(list.head.value).toStrictEqual(1);
+    list.append(3);
+    list.append(2);  
+    list.append(5); 
+    expect(list.head.next.next.next.value).toStrictEqual(5);
+  });
+  test('Should successfully insert a node before a node located at in the middle of a linked list.', () => {
+    const list = new LinkedList;
+    for(let i = 0; i < 3; i++) {
+      list.append(i);
+    }
+    list.insertBefore(1, 9);
+    console.log(list)
+    expect(list.head.next.value).toStrictEqual(9);
+  }) ;
+  test('Should successfully insert a node before the first node of a linked list.', ()=> {
+    const list = new LinkedList;
+    list.head = new Node(3)
+    list.insertBefore(3, 5);
+    expect(list.head.value).toStrictEqual(5);
+  });
+  test('Should successfully insert after a node in the middle of the linked list.', ()=> {
+    const list = new LinkedList;
+    for(let i = 0; i < 3; i++) {
+      list.append(i);
+    }
+    list.insertAfter(1, 9);
+    console.log(list)
+    expect(list.head.next.next.value).toStrictEqual(9);
+  });
   test('Should successfully insert a node after the last node of the linked list.', ()=> {
     const list = new LinkedList;
     for(let i = 0; i < 3; i++) {
