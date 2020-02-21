@@ -1,11 +1,10 @@
 # Code Challenges
 
 ## Table of Contents
-[Array-Reverse](../master/code-challenges/arraReverse/array-reverse.js),
-[Array-Shift](../master/code-challenges/array-shift/array-shift.js),
-[Array-Binary-Search](../master/code-challenges/arrayBinarySearch/array-binary-search.js),
-[Linked-List](../master/code-challenges/linkedList/linked-list.test.js),
-[2-Insertions](../master/code-challenges/linkedList/linked-list.test.js)
+[Array-Reverse](../master/code-challenges/arraReverse/array-reverse.js)
+[Array-Shift](../master/code-challenges/array-shift/array-shift.js)
+[Array-Binary-Search](../master/code-challenges/arrayBinarySearch/array-binary-search.js)
+[Linked-List](../master/code-challenges/linkedList/linked-list.test.js)
 
 # Reverse an Array
 
@@ -77,3 +76,27 @@ For this challenge i decided to write all the test first so that as i developed 
 
 ## Solution
 ![2-Insertions](../master/assets/2insertions.jpg);
+
+# 2 Insertions
+Write a method for the linked list which take a number k and returns the nodes value that is k from the end of the list.
+
+## Challenge Description
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+## Approach & Efficiency
+For this challenge i decided to write all the test first so that as i developed my methods the tests would prove that they were working. My approach was to traverse through the whole linked list and unshift each node value to an array and then return the kth index in that array. It is very efficient in terms of time and space.
+
+## Solution
+![kth-From-End](../master/assets/kthfromend.jpg);
+
+# Linked Lists merge
+Write a function that zips together two linked lists by alternating nodes and return the head of the new list.
+
+## Challenge Description
+Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+## Approach & Efficiency
+For this challenge I drew out everything before starting i drew out a diagram of two linked lists and how i would merge them. I found that the best way to accomplish this task was to traverse both lists simultaneously and change the paths dynamically. 
+
+## Solution
+![kth-From-End](../master/assets/merge.jpg);
