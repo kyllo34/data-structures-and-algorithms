@@ -1,11 +1,11 @@
 # Code Challenges
 
 ## Table of Contents
-[Array-Reverse](../master/code-challenges/arraReverse/array-reverse.js)
-[Array-Shift](../master/code-challenges/array-shift/array-shift.js)
-[Array-Binary-Search](../master/code-challenges/arrayBinarySearch/array-binary-search.js)
-[Linked-List](../master/code-challenges/linkedList/linked-list.test.js)
-[Queue-With-Stacks](../master/code-challenges/queueWithStacks/queue-with-stacks.js)
+- [Array-Reverse](#reverse-an-array)</br>
+- [Array-Shift](#shift-an-array)</br>
+- [Array-Binary-Search](#binary-search)</br>
+- [Linked-List](#singly-linked-list)</br>
+- [Queue-With-Stacks](#queue-with-stacks)</br>
 
 # Reverse an Array
 
@@ -16,7 +16,8 @@ Write a function called reverseArray which takes an array as an argument. Withou
 I know that unshift is a good way of pushing elements to an array but from the front so i decided to run with that method. Alternatively i could have iterated through the input array from end to beginning and pushed the elements to an empty array. I think the method i chose is shorter but just as readable.
 
 ## Solution
-![White-board](../master/assets/arrayreverse.jpg)
+![White-board](../master/assets/arrayreverse.jpg)</br>
+[Code](../master/code-challenges/arraReverse/array-reverse.js)
 
 # Shift an Array
 
@@ -30,8 +31,9 @@ Write a function called insertShiftArray which takes in an array and the value t
 I decided first to create an empty array to add elements to as I believed it would be more difficult to modify the input array. I created an independan counter for the new array as they will have different lengths eventually. I then chose to iterate through the input array and insert each element into the new array with each iteration. Once the iteration reached halfway through the input array rounding up minus 1 I set the new arrays value to equal the input value then continued with the loop. I returned the new array.
 
 ## Solution
-![White-board-1](../master/assets/array-shift1.jpg)
-![White-board-2](../master/assets/array-shift2.jpg)
+![White-board-1](../master/assets/array-shift1.jpg)</br>
+![White-board-2](../master/assets/array-shift2.jpg)</br>
+[code](../master/code-challenges/array-shift/array-shift.js)
 
 # Binary Search
 
@@ -46,6 +48,7 @@ I decided first to create an empty array to add elements to as I believed it wou
 
 ## Solution
 ![White-board-1](../master/assets/arrayBinarySearch.jpg)
+[code](../master/code-challenges/arrayBinarySearch/array-binary-search.js)
 
 # Singly Linked List
 Create a singly linked list that inserts, finds, and returns nodes.
@@ -63,6 +66,8 @@ Be sure to follow your language/frameworks standard naming conventions (e.g. C# 
 ## Approach & Efficiency
 I approached this challenge by following along loosely with the demo at first and then going off on my own to demonstrate my understanding. I ran the methods I created with console logs in a node environment so that i could visualize the construction of each node and the traversing. with the last method I decided to start creating tests so that i could test the toString() method directly and now I have a much better understanding of how to contruct and use tests.
 
+[code](../master/code-challenges/linkedList/linked-list.test.js)
+
 # 2 Insertions
 Create an append, insert before, and insert after method on a linked list
 
@@ -76,7 +81,9 @@ Write the following methods for the Linked List class:
 For this challenge i decided to write all the test first so that as i developed my methods the tests would prove that they were working. My approaches were efficent because you would only traverse once through the linked lists and only so far as was needed.
 
 ## Solution
-![2-Insertions](../master/assets/2insertions.jpg);
+![2-Insertions](../master/assets/2insertions.jpg)</br>
+[code](../master/code-challenges/linkedList/linked-list.test.js)
+
 
 # 2 Insertions
 Write a method for the linked list which take a number k and returns the nodes value that is k from the end of the list.
@@ -88,7 +95,8 @@ Write a method for the Linked List class which takes a number, k, as a parameter
 For this challenge i decided to write all the test first so that as i developed my methods the tests would prove that they were working. My approach was to traverse through the whole linked list and unshift each node value to an array and then return the kth index in that array. It is very efficient in terms of time and space.
 
 ## Solution
-![kth-From-End](../master/assets/kthfromend.jpg);
+![kth-From-End](../master/assets/kthfromend.jpg)</br>
+[code](../master/code-challenges/linkedList/linked-list.test.js)
 
 # Linked Lists merge
 Write a function that zips together two linked lists by alternating nodes and return the head of the new list.
@@ -101,6 +109,7 @@ For this challenge I drew out everything before starting i drew out a diagram of
 
 ## Solution
 ![kth-From-End](../master/assets/merge.jpg);
+[code](../master/code-challenges/linkedList/linked-list.test.js)
 
 # Queue With Stacks
 Write a PseudoQueue class that uses method enqueue(value) to insert a value in the PseudoQue and method dequeue which extracts a value from the PseudoQueue. Use two stack objects to accomplish this.
@@ -116,4 +125,5 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 For this challenge i first created the tests for the stack methods. I then modified the code and tests as i progressed. For the PseudoQueue methods i recognized that only the stacks can be operated on so if i wanted to add something to the bottom of the stack i would have to push all the values to another stack and the push the new value to the top of the new stack. For the enqueue method i recognized that you had to push all the values to a new stack again but then pop off the top value in the new stack.
 
 ## Solution
-![Queue-With-Stacks](../master/assets/queue_with_stacks.jpg);
+![Queue-With-Stacks](../master/assets/queue_with_stacks.jpg) </br>
+[Code](../master/code-challenges/queueWithStacks/queue-with-stacks.js)
