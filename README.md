@@ -113,7 +113,7 @@ dequeue() which extracts a value from the PseudoQueue, using a first-in, first-o
 The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
 
 ## Approach & Efficiency
-For this challenge I drew out everything before starting i drew out a diagram of two linked lists and how i would merge them. I found that the best way to accomplish this task was to traverse both lists simultaneously and change the paths dynamically. 
+For this challenge i first created the tests for the stack methods. I then modified the code and tests as i progressed. For the PseudoQueue methods i recognized that only the stacks can be operated on so if i wanted to add something to the bottom of the stack i would have to push all the values to another stack and the push the new value to the top of the new stack. For the enqueue method i recognized that you had to push all the values to a new stack again but then pop off the top value in the new stack.
 
 ## Solution
-![kth-From-End](../master/assets/merge.jpg);
+![Queue-With-Stacks](../master/assets/queue_with_stacks.jpg);
