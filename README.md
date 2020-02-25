@@ -6,6 +6,7 @@
 - [Array-Binary-Search](#binary-search)</br>
 - [Linked-List](#singly-linked-list)</br>
 - [Queue-With-Stacks](#queue-with-stacks)</br>
+- [Stacks-And-Queues](#stacks-and-queues)</br>
 
 # Reverse an Array
 
@@ -127,3 +128,30 @@ For this challenge i first created the tests for the stack methods. I then modif
 ## Solution
 ![Queue-With-Stacks](../master/assets/queue_with_stacks.jpg) </br>
 [Code](../master/code-challenges/queueWithStacks/queue-with-stacks.js)
+
+# Stacks and Queues
+Create a Stack and Queue class that can add, remove, read, and delete nodes from.
+
+## Challenge Description
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
+Create a Stack class that has a top property. It creates an empty Stack when instantiated.
+This object should be aware of a default empty value assigned to top when the stack is created.
+Define a method called push which takes any value as an argument and adds a new node with that value to the top of the stack with an O(1) Time performance.
+Define a method called pop that does not take any argument, removes the node from the top of the stack, and returns the node’s value.
+Define a method called peek that does not take an argument and returns the value of the node located on top of the stack, without removing it from the stack.
+Define a method called isEmpty that does not take an argument, and returns a boolean indicating whether or not the stack is empty.
+Create a Queue class that has a front property. It creates an empty Queue when instantiated.
+This object should be aware of a default empty value assigned to front when the queue is created.
+Define a method called enqueue which takes any value as an argument and adds a new node with that value to the back of the queue with an O(1) Time performance.
+Define a method called dequeue that does not take any argument, removes the node from the front of the queue, and returns the node’s value.
+Define a method called peek that does not take an argument and returns the value of the node located in the front of the queue, without removing it from the queue.
+Define a method called isEmpty that does not take an argument, and returns a boolean indicating whether or not the queue is empty.
+
+## Approach & Efficiency
+I started with creating a node class that accepts a value into its contructor and starts with a next property set to null. I created a stack class that instantiates with a null top property. I created a push method that accepts a value as an argument. First the method creates a place holder for the top node and then sets the stack top to be a new node with the argument. I then set the node after the top to be the original top so that it behaves as an insertion. I created a pop method that tests to see if the top is null. if it isnt it sets the top to be the tops next node which removes the original top. I created an isEmpty method which returns true if the top is null and false otherwise. I creaked a peek method that simply returns the top nodes value
+
+I wrote a Queue class that has a front property set to null which creates an empty queue on instantiation. For the enqueue method I first instantiate a new node with the given value and first test to see if the front is null. If it is then the front is set to the newly created node. If not we traverse the queue using a while loop until we get to the point where there is no next node. I then assigned the new node to be the next node. For the peak method I tested if the front is null. If it is then I returned null, otherwised i returned the front's value. For the dequeue method created a placeholder for the front and then set the front to the next node in the queue. I then returned the placeholder. 
+
+## Solution
+[Unit-Tests](../master/code-challenges/stacksAndQueues/stacks-and-queues.test.js) </br>
+[Code](./master/code-challenges/stacksAndQueues/stacks-and-queues.js)
