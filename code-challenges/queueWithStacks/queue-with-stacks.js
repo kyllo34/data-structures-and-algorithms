@@ -36,7 +36,6 @@ class PseudoQueue {
     for (let i = 0; i < this.stack1.storage.length; i++) {
       this.stack2.storage.push(this.stack1.storage[i]);
     }
-    console.log(this.stack2)
     this.stack2.storage.pop();
   }
 
