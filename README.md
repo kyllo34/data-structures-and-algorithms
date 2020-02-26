@@ -7,6 +7,8 @@
 - [Linked-List](#singly-linked-list)</br>
 - [Queue-With-Stacks](#queue-with-stacks)</br>
 - [Stacks-And-Queues](#stacks-and-queues)</br>
+- [Fifo-Animal-Shelter](#fifo-animal-shelter)</br>
+
 
 # Reverse an Array
 
@@ -155,3 +157,27 @@ I wrote a Queue class that has a front property set to null which creates an emp
 ## Solution
 [Unit-Tests](../master/code-challenges/stacksAndQueues/stacks-and-queues.test.js) </br>
 [Code](./master/code-challenges/stacksAndQueues/stacks-and-queues.js)
+
+
+## Solution
+![2-Insertions](../master/assets/2insertions.jpg)</br>
+[code](../master/code-challenges/linkedList/linked-list.test.js)
+
+# Fifo Animal Shelter
+Create a class called AnimalShelter which holds dogs and cats and operates using first-in and first-out. Engueue(animal) adds an animal to the shelter and dequeue(pref) returns either a dog or cat. if pre is not a dog or cat, return null.
+
+## Challenge Description
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+Implement the following methods:
+enqueue(animal): adds animal to the shelter. animal can be either a dog or a cat object.
+dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+## Approach & Efficiency
+For this challenge i first created an AnimalShelter class that instantiates with an empty array in its storage property. 
+For the enqueue method i tested to see if the input object is a dog or a cat and if it is then you push the object into the storage array. If it is not a dog or a cat i returned null.
+For the dequeue method i check to see if the input is a cat or a dog. If it is then i loop through the storage array until it ecounters the same animal, we splice it so that it removes it from the storage and return the removed element. If the input is not a cat or a dog i returned null.
+
+## Solution
+![kth-From-End](../master/assets/fifoanimalshelter.jpg)</br>
+[code](../master/code-challenges/fifoAnimalShelter/fifo-animal-shelter.js)</br>
+[test](../master/code-challenges/fifoAnimalShelter/fifo-animal-shelter.test.js)
