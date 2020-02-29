@@ -18,7 +18,6 @@ class AnimalShelter {
           return this.storage.splice(i, 1);
         }
       }
-      console.log(pref.animal)
     } else {
       return null;
     }

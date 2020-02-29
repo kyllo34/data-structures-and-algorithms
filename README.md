@@ -8,6 +8,7 @@
 - [Queue-With-Stacks](#queue-with-stacks)</br>
 - [Stacks-And-Queues](#stacks-and-queues)</br>
 - [Fifo-Animal-Shelter](#fifo-animal-shelter)</br>
+- [Trees](#trees)</br>
 
 
 # Reverse an Array
@@ -159,10 +160,6 @@ I wrote a Queue class that has a front property set to null which creates an emp
 [Code](./master/code-challenges/stacksAndQueues/stacks-and-queues.js)
 
 
-## Solution
-![2-Insertions](../master/assets/2insertions.jpg)</br>
-[code](../master/code-challenges/linkedList/linked-list.test.js)
-
 # Fifo Animal Shelter
 Create a class called AnimalShelter which holds dogs and cats and operates using first-in and first-out. Engueue(animal) adds an animal to the shelter and dequeue(pref) returns either a dog or cat. if pre is not a dog or cat, return null.
 
@@ -181,3 +178,24 @@ For the dequeue method i check to see if the input is a cat or a dog. If it is t
 ![kth-From-End](../master/assets/fifoanimalshelter.jpg)</br>
 [code](../master/code-challenges/fifoAnimalShelter/fifo-animal-shelter.js)</br>
 [test](../master/code-challenges/fifoAnimalShelter/fifo-animal-shelter.test.js)
+
+# Trees
+Create a binay tree that has depth traversals called preOrder, InOrder, and postOrder which returns an array of the values ordered appropriately.
+
+## Challenge
+Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
+Create a BinaryTree class
+Define a method for each of the depth first traversals called preOrder, inOrder, and postOrder which returns an array of the values, ordered appropriately.
+Any exceptions or errors that come from your code should be semantic, capturable errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
+
+## Approach & Efficiency
+I chose to instantiate my BinaryTree class with a storage property to push the values to and return at the end of the traversal. It seemed like the best way to traverse the nodes was recursively as with each traversal you can essentially treat the current node as the new root while saving the previous node in the callstack. This allowed for the code to be fairly dry and allowed the Big O for time to be O(n) as each node is only hit once and the Big O for space complexity to be O(1).
+
+## API
+`preOrder()` - When invoked accepts a node as an argument. It will first check to make sure that the argument is a node and will return a message if it isn't. It will then push the input nodes value to the BinaryTree storage. It will then check to see if there is a left node and will call the preOrder function again but with the next node as the argument. These invocations will be pushed onto the callstack. Once it traverses to the point where there is no left node next it will begin to check all the right nodes recursively by popping off the callstack. It will then return the storage array
+`inOrder()` - Similar to the preOrder() method we first validate the input to be a node and perform the same traversal via recursion but will push the values to the array after we run past the second condition and then we return the storage array.
+`postOrder()` - This method is similar to the previous two but push the node values to the storage when both the left and right nodes of the parent node have been evaluated.
+
+## Solution
+[code](../master/code-challenges/tree/tree.js)</br>
+[test](../master/code-challenges/tree/tree.test.js)
