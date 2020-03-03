@@ -29,6 +29,7 @@ class BinaryTree {
     }
     return this.storage;
   }
+  
   inOrder(root) {
     if(!root) {
       return 'Where\'s the node!';
