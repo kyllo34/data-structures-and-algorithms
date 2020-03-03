@@ -9,6 +9,8 @@
 - [Stacks-And-Queues](#stacks-and-queues)</br>
 - [Fifo-Animal-Shelter](#fifo-animal-shelter)</br>
 - [Trees](#trees)</br>
+- [Fizz-Buzz-Tree](#fizz-buzz-tree)</br>
+
 
 
 # Reverse an Array
@@ -199,3 +201,21 @@ I chose to instantiate my BinaryTree class with a storage property to push the v
 ## Solution
 [code](../master/code-challenges/tree/tree.js)</br>
 [test](../master/code-challenges/tree/tree.test.js)
+
+# Fizz Buzz Tree
+Write a function called FizzBuzzTree that accepts a tree and creates a new similar tree with numbers divisible by 3 replaced with 'Fizz', numbers divisible by 5 with 'Buzz', numbers divisible by 3 and 5 with 'FizzBuzz', and turn the number into a string otherwise.
+## Challenge Description
+Write a function called FizzBuzzTree which takes a tree as an argument.
+Without utilizing any of the built-in methods available to your language, determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
+If the value is divisible by 3, replace the value with “Fizz”
+If the value is divisible by 5, replace the value with “Buzz”
+If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+If the value is not divisible by 3 or 5, simply turn the number into a String.
+Return the new tree.
+## Approach & Efficiency
+I decided to approach this problem by traversing depth first in the style of an inOrder method as I will need to hit every node once to read its value. I created a new node in the traversal to make the coding easier. I created a separate function to perform the comparison which is called at the beginning of the traversal. 
+
+## Solution
+[code](../master/code-challenges/fizzBuzzTree/fizz-buzz-tree.js)</br>
+[test](../master/code-challenges/fizzBuzzTree/fizz-buzz-tree.test.js)</br>
+![Fizz-Buzz-Tree](../master/assets/fizz-buzz-tree.jpg)</br>
