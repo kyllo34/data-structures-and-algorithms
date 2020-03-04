@@ -10,6 +10,7 @@
 - [Fifo-Animal-Shelter](#fifo-animal-shelter)</br>
 - [Trees](#trees)</br>
 - [Fizz-Buzz-Tree](#fizz-buzz-tree)</br>
+- [Breadth-First-Traversal](#breadth-first-traversal)</br>
 
 
 
@@ -219,3 +220,13 @@ I decided to approach this problem by traversing depth first in the style of an 
 [code](../master/code-challenges/fizzBuzzTree/fizz-buzz-tree.js)</br>
 [test](../master/code-challenges/fizzBuzzTree/fizz-buzz-tree.test.js)</br>
 ![Fizz-Buzz-Tree](../master/assets/fizz-buzz-tree.jpg)</br>
+
+# Breadth First Traversal
+Write a breadth-first traversal method that takes in a binary tree as input and returns a list of values in the tree in the order that they were encountered.
+## Challenge Description
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
+<!-- Embedded whiteboard image -->

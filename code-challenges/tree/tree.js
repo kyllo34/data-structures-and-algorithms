@@ -78,9 +78,7 @@ class BinarySearchTree extends BinaryTree {
     }
 
   }
-  contains(value) {
 
-  }
 }
 
 module.exports = { Node, BinaryTree, BinarySearchTree }
