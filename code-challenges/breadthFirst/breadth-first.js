@@ -11,6 +11,23 @@ class BinaryTree {
   constructor(root = null) {
     this.root = root;
   }
+
+  findMaximumValue() {
+    return this.preOrderIsh(this.root, -Infinity)
+  }
+  preOrderIsh(root, max) {
+    if(root.value > max) {
+      max = root.value;
+    }
+    if(root.left !== null) {
+      max = this.preOrderIsh(root.left, max);
+    }
+    if(root.right !== null) {
+      max = this.preOrderIsh(root.right, max)
+    }
+    return max
+  }
+
 }
 
 function breadthFirst(tree) {
