@@ -10,3 +10,10 @@ describe('breadthFirst()', () => {
     expect(breadthFirst(tree1)).toEqual([5, 3, 13, 15, 7, 500, 20]);
   })
 })
+
+describe('findMaximumValue()', () => {
+  it('Returns the maximum value in the tree', () => {
+    const tree1 = new BinaryTree(new Node(5, new Node(3, new Node(15), new Node(7)), new Node(13, new Node(500), new Node(20))));
+    expect(tree1.findMaximumValue()).toEqual(500)
+  })
+})

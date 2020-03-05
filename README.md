@@ -11,6 +11,7 @@
 - [Trees](#trees)</br>
 - [Fizz-Buzz-Tree](#fizz-buzz-tree)</br>
 - [Breadth-First-Traversal](#breadth-first-traversal)</br>
+- [Max-Value](#max-value)</br>
 
 
 
@@ -232,3 +233,16 @@ For the breadth-first traversal i used a queue data structure. As we traverse we
 [code](../master/code-challenges/breadthFirst/breadth-first.js)</br>
 [test](../master/code-challenges/breadthFirst/breadth-first.test.js)</br>
 ![Fizz-Buzz-Tree](../master/assets/breadthfirst.jpg)</br>
+
+# Max Value
+Write an instance method called find-maximum-value which returns the maximum value stored in a Binary Tree.
+
+## Challenge Description
+Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## Approach & Efficiency
+I chose to use a depth search traversal to hit every node. I instantiated a max vairable with -Infinity that gets compared to each node value upon traversal and set equal to the value if the value is greater. At the end I returned the max value.
+
+## Solution
+[code](../master/code-challenges/breadthFirst/breadth-first.js)</br>
+[test](../master/code-challenges/breadthFirst/breadth-first.test.js)</br>
