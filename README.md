@@ -271,7 +271,7 @@ InsertionSort(int[] arr)
 ```
 
 ## Approach & Efficiency
-What this function does on fundemental level is iterate through the array and compare 2 adjacent values and when the next value is less you shift it to the right and insert the held value at the point where it is no longer less than the next element in the array.
+What this function does on fundemental level is iterate through the array and compare 2 adjacent values and when the next value is less you shift it to the right and insert the held value at the point where it is no longer less than the next element in the array. The space complexity for this is O(1) as we only use a variable to hold the integer to be compared. The time complexity at worse is O(n^2) as if the array is reverse-sorted then each element will be iterated over the array's length minus its index's times.
 
 ## Solution
 [code](../master/code-challenges/insert-sort/inserSort.js)</br>
