@@ -12,6 +12,7 @@
 - [Fizz-Buzz-Tree](#fizz-buzz-tree)</br>
 - [Breadth-First-Traversal](#breadth-first-traversal)</br>
 - [Max-Value](#max-value)</br>
+- [Insertion-Sort](#insertion-sort)</br>
 
 
 
@@ -246,3 +247,33 @@ I chose to use a depth search traversal to hit every node. I instantiated a max 
 ## Solution
 [code](../master/code-challenges/breadthFirst/breadth-first.js)</br>
 [test](../master/code-challenges/breadthFirst/breadth-first.test.js)</br>
+
+# Insertion Sort
+Write a function that takes in an array of integers and sorts them from smallest to largest
+
+## Challenge Description
+Review the pseudocode below, then trace the algorithm by stepping through the process with the provided sample array. Document your explanation by creating a blog article that shows the step-by-step output after each iteration through some sort of visual.
+
+Once you are done with your article, code a working, tested implementation of Insertion Sort based on the pseudocode provided.
+```
+InsertionSort(int[] arr)
+
+  FOR i = 1 to arr.length
+  
+    int j <-- i - 1
+    int temp <-- arr[i]
+    
+    WHILE j >= 0 AND temp < arr[j]
+      arr[j + 1] <-- arr[j]
+      j <-- j - 1
+      
+    arr[j + 1] <-- temp
+```
+
+## Approach & Efficiency
+What this function does on fundemental level is iterate through the array and compare 2 adjacent values and when the next value is less you shift it to the right and insert the held value at the point where it is no longer less than the next element in the array.
+
+## Solution
+[code](../master/code-challenges/insert-sort/inserSort.js)</br>
+[test](../master/code-challenges/insert-sort/insertSort.test.js)</br>
+![insert-sort](../master/assets/insert-sort.jpg)</br>
