@@ -1,33 +1,29 @@
-function quickSort(arr, left = 0, right = arr.length - 1) {
-  // if the left and right limit dont overlap
+function quickSort (arr, left = 0, right = arr.length - 1) {
   if (left < right) {
-    // sets a position equal to the 
     let position = partition(arr, left, right)
     quickSort(arr, left, position - 1)
     quickSort(arr, position + 1, right)
   }
+  return arr
 }
-
-function partition(arr, left, right) {
+function partition (arr, left, right) {
   let pivot = arr[right]
-  let low = left - 1
+  let low = left;
   for (let i = left; i <= right; i++) {
-    if(arr[i] <= pivot) {
-      low++;
+    if (arr[i] < pivot) {
       swap(arr, i, low)
+      low++;
     }
   }
-  swap(arr, right, low + 1)
-  return low + 1
+  swap(arr, right, low)
+  return low;
 }
-
-function swap(arr, i, low) {
+function swap (arr, i, low) {
   let temp
   temp = arr[i]
   arr[i] = arr[low]
   arr[low] = temp
 }
-
 describe('quickSort()', () => {
   it('Sorts an array of integers from smallest to largest.', () => {
     let arr1 = [8,4,23,42,16,15]
