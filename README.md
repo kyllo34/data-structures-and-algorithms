@@ -14,6 +14,7 @@
 - [Max-Value](#max-value)</br>
 - [Insertion-Sort](#insertion-sort)</br>
 - [Merge-Sort](#merge-sort)</br>
+- [Repeated-Word](#repeated-word)</br>
 
 
 
@@ -346,3 +347,16 @@ The time complexity of this method is less than O(n) as it essentially creates a
 ## Solution
 [code/test](../master/code-challenges/merge-sort/mergeSort.test.js)</br>
 ![insert-sort](../master/assets/merge-sort.jpg)</br>
+
+# Repeated Word
+<!-- Short summary or background information -->
+
+## Challenge Description
+<!-- Description of the challenge -->
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
+[code/test](../master/code-challenges/repeatedWord/repeated-word.test.js)</br>
+![insert-sort](../master/assets/repeated-word.jpg)</br>

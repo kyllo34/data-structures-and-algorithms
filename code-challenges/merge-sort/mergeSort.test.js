@@ -35,18 +35,15 @@ function merge(left, right, arr) {
     k++
   }
   // if all the remaining values in the right side are lower than the values in the right then replace the remaining entries in input array with the right array
-  if (i === left.length) {
-    while(j < right.length) {
-      arr[k] = right[j]
-      j++; k++;
-    }
+  while(j < right.length) {
+    arr[k] = right[j]
+    j++; k++;
+  }
 
   // if all the remaining values in the left side are lower than the values in the right then replace the remaining entries in input array with the right array
-  } else {
-    while(i < left.length) {
-      arr[k] = left[i]
-      i++; k++;
-    }
+  while(i < left.length) {
+    arr[k] = left[i]
+    i++; k++;
   }
 }
 
