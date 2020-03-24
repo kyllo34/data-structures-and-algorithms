@@ -349,14 +349,14 @@ The time complexity of this method is less than O(n) as it essentially creates a
 ![insert-sort](../master/assets/merge-sort.jpg)</br>
 
 # Repeated Word
-<!-- Short summary or background information -->
+Write a function that returns the first word that occurs more than once in the input string
 
 ## Challenge Description
-<!-- Description of the challenge -->
+Write a function that accepts a lengthy string parameter.
+Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-
+For this challenge i recognized that I would need to turn the input string into an array of words and make the individual words be lowercase and ommit punctuation for comparison. I decided to create a hash map that stores each word as a key and the index as its value even though we only care about the key. To know what words are in the array we would have to iterate through it and store the words in the hashmap. With each iteration we check to see if the current element exists in the map. If it does we return the element and stop the loop. Otherwise, we add the element to the map. The Big O for time is however long it takes to iterate through the array and hit the first word that occurs more than once which would be O(n) at worst if the word is at the end of the string. The space complexity is O(2n) => O(n) as we are creating an array and a hashmap to store the words of the string.
 ## Solution
 [code/test](../master/code-challenges/repeatedWord/repeated-word.test.js)</br>
 ![insert-sort](../master/assets/repeated-word.jpg)</br>
