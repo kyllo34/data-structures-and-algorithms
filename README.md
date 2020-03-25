@@ -15,6 +15,7 @@
 - [Insertion-Sort](#insertion-sort)</br>
 - [Merge-Sort](#merge-sort)</br>
 - [Repeated-Word](#repeated-word)</br>
+- [Hashmap-LEFT- JOIN](#hashmap-left-join)</br>
 
 
 
@@ -374,3 +375,20 @@ The time complexity is O(n) as we traverse through both tress but comparing and 
 ## Solution
 [code/test](../master/code-challenges/treeIntersection/tree-intersection.test.js)</br>
 ![tree-intersection](../master/assets/tree-intersection.jpg)</br>
+
+# Hashmap LEFT JOIN
+Write a function that joins the values from a right map with the values of a left map if the keys match
+## Challenge
+Write a function that LEFT JOINs two hashmaps into a single data structure.
+The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
+The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
+Combine the key and corresponding values (if they exist) into a new data structure according to LEFT JOIN logic.
+LEFT JOIN means all the values in the first hashmap are returned, and if values exist in the “right” hashmap, they are appended to the result row. If no values exist in the right hashmap, then some flavor of NULL should be appended to the result row.
+The returned data structure that holds the results is up to you. It doesn’t need to exactly match the output below, so long as it achieves the LEFT JOIN logic.
+Avoid utilizing any of the library methods available to your language.
+## Approach & Efficiency
+This code challenge seemed pretty simple. At first i created an empty array to push the keys, and values from the maps and create an index counter to increment with each iteration of the left map. i defined a variable called rightValue that instantiates as null with every iteration that changes to the right maps value if the right and left keys match. i then set the output array at the current index equal to an array containing the left key and an array containing the left value and the variable rightValue. I then incremented the index counter. At the end i returned the output array. I then realized that i could modify one of the maps in place to avoid adding any new data structures aside from the rightValue variable. 
+
+## Solution
+[code/test](../master/code-challenges/leftJoin/left-join.test.js)</br>
+![left-join](../master/assets/left-join.jpg)</br>
