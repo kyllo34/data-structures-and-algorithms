@@ -349,14 +349,28 @@ The time complexity of this method is less than O(n) as it essentially creates a
 ![insert-sort](../master/assets/merge-sort.jpg)</br>
 
 # Repeated Word
-<!-- Short summary or background information -->
+Write a function that returns the first word that occurs more than once in the input string
 
 ## Challenge Description
-<!-- Description of the challenge -->
+Write a function that accepts a lengthy string parameter.
+Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-
+For this challenge i recognized that I would need to turn the input string into an array of words and make the individual words be lowercase and ommit punctuation for comparison. I decided to create a hash map that stores each word as a key and the index as its value even though we only care about the key. To know what words are in the array we would have to iterate through it and store the words in the hashmap. With each iteration we check to see if the current element exists in the map. If it does we return the element and stop the loop. Otherwise, we add the element to the map. The Big O for time is however long it takes to iterate through the array and hit the first word that occurs more than once which would be O(n) at worst if the word is at the end of the string. The space complexity is O(2n) => O(n) as we are creating an array and a hashmap to store the words of the string.
 ## Solution
 [code/test](../master/code-challenges/repeatedWord/repeated-word.test.js)</br>
 ![insert-sort](../master/assets/repeated-word.jpg)</br>
+
+# Tree Intersection
+write a function that accepts 2 trees and returns an array of values found in both trees
+## Challenge Description
+Write a function called tree_intersection that takes two binary tree parameters.
+Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+## Approach & Efficiency
+What i started with is a depth 1st traversal for both trees as we will need to read every single value in both trees to compare. I employed a hashmap to add the values to and compare as keys to ensure that each value was unique. Traversing the second tree adds keys to a new hashmap if the value doesnt exist in the first hashmap. I then returned the array spread of the maps keys.
+
+The time complexity is O(n) as we traverse through both tress but comparing and adding values to hashmaps is O(1) which can be dsregarded. The space complexity is at worst O(n/2) because the first hashmap could contain all of the 1st tree and not match with any values in the 2nd tree.
+
+## Solution
+[code/test](../master/code-challenges/treeIntersection/tree-intersection.test.js)</br>
+![tree-intersection](../master/assets/tree-intersection.jpg)</br>
