@@ -360,3 +360,17 @@ For this challenge i recognized that I would need to turn the input string into 
 ## Solution
 [code/test](../master/code-challenges/repeatedWord/repeated-word.test.js)</br>
 ![insert-sort](../master/assets/repeated-word.jpg)</br>
+
+# Tree Intersection
+write a function that accepts 2 trees and returns an array of values found in both trees
+## Challenge Description
+Write a function called tree_intersection that takes two binary tree parameters.
+Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+## Approach & Efficiency
+What i started with is a depth 1st traversal for both trees as we will need to read every single value in both trees to compare. I employed a hashmap to add the values to and compare as keys to ensure that each value was unique. Traversing the second tree adds keys to a new hashmap if the value doesnt exist in the first hashmap. I then returned the array spread of the maps keys.
+
+The time complexity is O(n) as we traverse through both tress but comparing and adding values to hashmaps is O(1) which can be dsregarded. The space complexity is at worst O(n/2) because the first hashmap could contain all of the 1st tree and not match with any values in the 2nd tree.
+
+## Solution
+[code/test](../master/code-challenges/treeIntersection/tree-intersection.test.js)</br>
+![tree-intersection](../master/assets/tree-intersection.jpg)</br>
