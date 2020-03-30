@@ -16,6 +16,7 @@
 - [Merge-Sort](#merge-sort)</br>
 - [Repeated-Word](#repeated-word)</br>
 - [Hashmap-LEFT- JOIN](#hashmap-left-join)</br>
+- [Graphs](#graphs)</br>
 
 
 
@@ -392,3 +393,15 @@ This code challenge seemed pretty simple. At first i created an empty array to p
 ## Solution
 [code/test](../master/code-challenges/leftJoin/left-join.test.js)</br>
 ![left-join](../master/assets/left-join.jpg)</br>
+
+# Graphs
+<!-- Short summary or background information -->
+
+## Challenge
+<!-- Description of the challenge -->
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## API
+<!-- Description of each method publicly available in your Graph -->
