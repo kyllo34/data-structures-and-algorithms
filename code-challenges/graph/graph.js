@@ -1,23 +1,9 @@
-class Node {
-  constructor(value) {
-    this.value = value;
-  }
-}
-
-class Edge {
-  constructor(node1, node2, weight) {
-    this.node1 = node1;
-    this.nod2 = node2;
-    this.weight = weight
-  }
-}
-
 class Graph {
   constructor () {
     // Need to hold all of the graphs nodes in a hashMap
     this.nodes = new Map();
-
   }
+
   // adds a new node to the graph
   addNode(value) {
     // if the graph already contains this value
@@ -25,12 +11,10 @@ class Graph {
       // return the node with that value
       return this.nodes.get(value)
     } else {
-      // else create the new node
-      const node = new Node(value)
       // add node to the nodes map
-      this.nodes.set(value, node)
+      this.nodes.set(value, new Map())
       // return the new node
-      return node
+      return value;
     }
   }
   // adds a new edge between two nodes in the graph
@@ -39,10 +23,31 @@ class Graph {
     if (!node1 || !node2 || !weight) return null
     // if this input nodes exist in the graph
     if (this.nodes.has(node1) && this.nodes.has(node2)) {
-      this.nodes.set(node1, [this.nodes.get(node1)])
+      // retrieve all edges for node 1
+      let oldEdges1 = this.nodes.get(node1)
+      // add node 2 withe weight to edges list
+      oldEdges1.set(node2, weight)
+      // set node 1 to point to node 2 with weight
+      this.nodes.set(node1, oldEdges1)
+      let oldEdges2 = this.nodes.get(node2)
+      oldEdges2.set(node1, weight)
+      this.nodes.set(node2, oldEdges2)
     }
+  }
+
+  // Returns all of the nodes in the graph as a collection
+  getNodes() {
+    return this.nodes
+  }
+  //returns all the neightbors/edges of the input node
+  getNeighbor(node) {
+    return this.nodes.get(node)
+  }
+  // Returns the total number of nodes in the graph
+  size() {
+    return this.nodes.size
   }
 
 }
 
-module.exports = { Graph }
+module.exports = { Graph, Node }
