@@ -1,3 +1,9 @@
+class Node {
+  constructor(value) {
+    this.value = value
+  }
+}
+
 class Graph {
   constructor () {
     // Need to hold all of the graphs nodes in a hashMap
@@ -5,16 +11,16 @@ class Graph {
   }
 
   // adds a new node to the graph
-  addNode(value) {
-    // if the graph already contains this value
-    if(this.nodes.has(value)) {
-      // return the node with that value
-      return this.nodes.get(value)
+  addNode(node) {
+    // if the graph already contains this node
+    if(this.nodes.has(node)) {
+      // return the node
+      return this.nodes.get(node)
     } else {
       // add node to the nodes map
-      this.nodes.set(value, new Map())
+      this.nodes.set(node, new Map())
       // return the new node
-      return value;
+      return node;
     }
   }
   // adds a new edge between two nodes in the graph
@@ -32,6 +38,7 @@ class Graph {
       let oldEdges2 = this.nodes.get(node2)
       oldEdges2.set(node1, weight)
       this.nodes.set(node2, oldEdges2)
+      
     }
   }
 

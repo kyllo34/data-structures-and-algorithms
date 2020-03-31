@@ -1,15 +1,17 @@
-const { Graph } = require('./graph')
+const { Graph, Node } = require('./graph')
 
 describe('Graph', () => {
   describe('addNode()', () => {
     it('Adds a new node to the graph with the input value.', () => {
       const graph = new Graph()
-      graph.addNode(3)
-      expect(graph.nodes.has(3)).toBe(true)
+      const node = new Node(3)
+      graph.addNode(node)
+      expect(graph.nodes.has(node)).toBe(true)
     })
     it('Returns the newly added node.', () => {
       const graph = new Graph()
-      expect(graph.addNode(3)).toStrictEqual(3)
+      const node = new Node(5)
+      expect(graph.addNode(node)).toBe(node)
     })
   })
   describe('addEdge()', () => {
@@ -18,6 +20,7 @@ describe('Graph', () => {
       graph.addNode(3)
       graph.addNode(8)
       graph.addEdge(3, 8, 18)
+      console.log(graph.nodes)
       expect(graph.nodes.get(3)).toStrictEqual(new Map([[8, 18]]))
       expect(graph.nodes.get(8)).toStrictEqual(new Map([[3, 18]]))
     })
