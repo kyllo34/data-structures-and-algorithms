@@ -10,23 +10,19 @@ class Graph {
     this.nodes = new Map();
   }
 
-  // adds a new node to the graph
-  addNode(node) {
-    // if the graph already contains this node
-    if(this.nodes.has(node)) {
-      // return the node
-      return this.nodes.get(node)
-    } else {
-      // add node to the nodes map
-      this.nodes.set(node, new Map())
-      // return the new node
-      return node;
-    }
+  // adds a new node to the graph with the given value
+  addNode(value) {
+    // create a new node
+    const node = new Node(value)
+    // add node to the nodes map
+    this.nodes.set(node, new Map())
+    // return the new node
+    return node;
   }
   // adds a new edge between two nodes in the graph
-  addEdge(node1, node2, weight) {
+  addEdge(node1, node2, weight = 0) {
     // if no values are passed in, return null
-    if (!node1 || !node2 || !weight) return null
+    if (!node1 || !node2) return null
     // if this input nodes exist in the graph
     if (this.nodes.has(node1) && this.nodes.has(node2)) {
       // retrieve all edges for node 1
@@ -38,7 +34,6 @@ class Graph {
       let oldEdges2 = this.nodes.get(node2)
       oldEdges2.set(node1, weight)
       this.nodes.set(node2, oldEdges2)
-      
     }
   }
 
