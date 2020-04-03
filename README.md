@@ -455,3 +455,16 @@ For this method i instantiated an array to be be [true, 0] by default as as soon
 ## Solution
 [code](../master/code-challenges/getEdge/get-edge.js)</br>
 [test](../master/code-challenges/getEdge/get-edge.test.js)</br>
+
+# Depth First Graph
+Write a function that performs a breadth-first traversal of a graph given an input node and returns the nodes in the order that they are traversed
+
+## Challenge Description
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+## Approach & Efficiency
+For this method it will be best to use recursion and use JavaScripts callstack as a stack for nodes that have been traversed. I initialize the function with a node and a set as parameters. First I checked to see if the input node exists in the graph. Next I immediately add the input node into the visited set and grab the neighbors of the node with the method i created which returns a map of nodes. I only care about the nodes and not the weights so i use the Map.keys() method to create an interable object of keys which leads me to the for...of loop. I first check to see if any of the nodes have been visited yet. If not, we call the depthFirst method with that node and pass in the visited list. After the callstack is empty we return the list of visited nodes in the order they were traversed. The space complexity of this method is O(n) as we create a set of visited nodes which will contain all the nodes in the graph. The time complexity is also O(n^2) as adding a node to our visited set is O(1), getting neighbors is O(1), iterating through the neighbors will ultimately be O(n*(n-1)) as we will have to iterate through the neighbors of every node to determine if they have been visited. 
+
+## Solution
+[code](../master/code-challenges/depthFirst/depth-first.js)</br>
+[test](../master/code-challenges/depthFirst/depth-first.test.js)</br>
